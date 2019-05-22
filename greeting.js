@@ -1,6 +1,7 @@
 const form = document.querySelector(".js-form"),
   input = form.querySelector("input"),
-  greeting = document.querySelector(".js-greetings");
+  greeting = document.querySelector(".js-greetings"),
+  message = document.querySelector(".gretting-message");
 
 const USER_LS = "currentUser",
   SHOWING_CN = "showing";
@@ -21,6 +22,10 @@ function askForName() {
   form.addEventListener("submit", handleSubmit);
 }
 
+function paintMessage(text) {
+  message.innerText = "Hello, What's your name?";
+}
+
 function paintGreeting(text) {
   form.classList.remove(SHOWING_CN);
   greeting.classList.add(SHOWING_CN);
@@ -30,6 +35,7 @@ function paintGreeting(text) {
 function loadName() {
   const currentUser = localStorage.getItem(USER_LS);
   if (currentUser === null) {
+    paintMessage();
     askForName();
   } else {
     paintGreeting(currentUser);
