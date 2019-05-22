@@ -1,7 +1,7 @@
 .js-clock {
   display: block;
   justify-content: center;
-  margin-top: 300px;
+  margin-top: 200px;
 }
 
 .js-clock h1 {
@@ -9,5 +9,5 @@
   text-align: center;
   color: #dfe6e9;
   top: 200px;
-  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
 }

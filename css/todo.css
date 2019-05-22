@@ -1,18 +1,45 @@
 .js-toDoForm {
-  display: none;
+  /*display: none;
+    toDoForm.innerText = "Write a to do";
+    */
 }
 
 .js-toDoForm input {
   background: 0;
-  margin: 0 auto;
+  margin: 30px auto;
   border: 0;
-  border-bottom: 3px solid #b2bec3;
-  width: 50%;
-  min-width: 600px;
+  border-bottom: 3px solid #dfe6e9;
+  width: 30%;
   height: 50px;
   display: block;
   text-align: center;
   color: #dfe6e9;
   font-size: 30px;
   cursor: text;
+}
+
+.js-toDoForm input:focus {
+  outline: none;
+}
+
+.js-toDoList{
+  display:block;
+  margin-top: 20px;
+  margin-left: 40%;
+  text-align: left;
+  justify-content: flex-start;
+  color: #dfe6e9;
+  font-size: 20px;
+  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
+}
+
+.js-toDoList li{
+  margin-bottom: 10px;
+}
+
+.js-toDoList button{
+  background: 0;
+  border: 0;
+  cursor: pointer;
+  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
 }

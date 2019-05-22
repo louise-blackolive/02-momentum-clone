@@ -1,8 +1,8 @@
 const form = document.querySelector(".js-form"),
   input = form.querySelector("input"),
   greeting = document.querySelector(".js-greetings"),
-  message = document.querySelector(".gretting-message"),
-  todo = form.querySelector(".js-toDoForm");
+  message = document.querySelector(".gretting-message");
+  
 
 const USER_LS = "currentUser",
   SHOWING_CN = "showing";
@@ -17,7 +17,6 @@ function handleSubmit(event) {
   location.reload();
   paintGreeting(currentValue);
   saveName(currentValue);
-  paintToDo();
 }
 
 function askForName() {
@@ -28,11 +27,11 @@ function askForName() {
 function paintMessage(text) {
   message.innerText = "Hello, What's your name?";
 }
-
+/*
 function paintToDo(todo) {
   todo.innerText = "Write a to do";
 }
-
+*/
 function paintGreeting(text) {
   form.classList.remove(SHOWING_CN);
   greeting.classList.add(SHOWING_CN);
@@ -46,7 +45,6 @@ function loadName() {
     askForName();
   } else {
     paintGreeting(currentUser);
-    paintToDo();
   }
 }
 
