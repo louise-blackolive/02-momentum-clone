@@ -35,6 +35,7 @@
 
 .js-toDoList li{
   margin-bottom: 10px;
+  width: 30%;
 }
 
 .js-toDoList button{
