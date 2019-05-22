@@ -25,11 +25,15 @@
   outline: none;
 }
 
-.js-toDoForm {
-  display: none;
-}
-
 .form,
 .greetings {
   display: none;
+}
+
+.greetings {
+  display: block;
+  text-align: center;
+  font-size: 50px;
+  color: #dfe6e9;
+  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
 }

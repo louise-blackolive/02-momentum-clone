@@ -1,7 +1,8 @@
 const form = document.querySelector(".js-form"),
   input = form.querySelector("input"),
   greeting = document.querySelector(".js-greetings"),
-  message = document.querySelector(".gretting-message");
+  message = document.querySelector(".gretting-message"),
+  todo = form.querySelector(".js-toDoForm");
 
 const USER_LS = "currentUser",
   SHOWING_CN = "showing";
@@ -13,8 +14,10 @@ function saveName(text) {
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = input.value;
+  location.reload();
   paintGreeting(currentValue);
   saveName(currentValue);
+  paintToDo();
 }
 
 function askForName() {
@@ -26,10 +29,14 @@ function paintMessage(text) {
   message.innerText = "Hello, What's your name?";
 }
 
+function paintToDo(todo) {
+  todo.innerText = "Write a to do";
+}
+
 function paintGreeting(text) {
   form.classList.remove(SHOWING_CN);
   greeting.classList.add(SHOWING_CN);
-  greeting.innerText = `Hello ${text}`;
+  greeting.innerText = `Hello, ${text}`;
 }
 
 function loadName() {
@@ -39,6 +46,7 @@ function loadName() {
     askForName();
   } else {
     paintGreeting(currentUser);
+    paintToDo();
   }
 }
 
