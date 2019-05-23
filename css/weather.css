@@ -1,21 +1,24 @@
 .weather-div {
   display: flex;
-  align-content: flex-end;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
 
-/*
-.weather-div .js-weather__icon {
-  background-color: rgba(255, 255, 255, 0.2);
+.js-weather__icon {
+  background-color: rgba(45, 52, 54,0.5);
   width: 45px;
-  height: 45px;
+  height: 80px;
   padding: 0;
-  border-radius: 50%;
   margin-top: 20px;
 }
-*/
+
 .js-weather {
-  background-color: red;
+  background-color: rgba(45, 52, 54,0.5);
   margin: 20px 20px;
+  margin-left: 0;
+  padding-left: 10px;
+  width: 200px;
+  height: 85px;
   color: #cacfd1;
   font-size: 25px;
   text-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
