@@ -1,4 +1,5 @@
 const WEATHER = document.querySelector(".js-weather");
+//const WEATHER_ICON = document.querySelector(".js-weather__icon");
 const API_KEY = "0a74c49f70d4846b83bc92dca8bdc2bb";
 const COORDS = "coords";
 
@@ -10,9 +11,15 @@ function getWeather(lat, lng) {
       return response.json();
     })
     .then(function(json) {
-      const temperature = json.main.temp;
+      const temperature = Math.floor(json.main.temp);
       const place = json.name;
-      WEATHER.innerText = `${temperature} @ ${place}`;
+      const icon = json.weather[0].icon;
+      const description = json.weather[0].description;
+      /* WEATHER_ICON.innerHTML =
+        "<img src='http://openweathermap.org/img/w/" + icon + ".png'>";*/
+      WEATHER.innertext = `${temperature} °C
+      ${description}
+      @ ${place}`;
     });
 }
 

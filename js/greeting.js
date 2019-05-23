@@ -17,6 +17,7 @@ function handleSubmit(event) {
   location.reload();
   paintGreeting(currentValue);
   saveName(currentValue);
+  todoInit();
 }
 
 function askForName() {

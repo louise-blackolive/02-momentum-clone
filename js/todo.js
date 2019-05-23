@@ -56,6 +56,8 @@ function loadToDos() {
       paintToDo(toDo.text);
     });
   }
+  
+
 }
 
 function init() {
