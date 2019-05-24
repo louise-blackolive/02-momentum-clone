@@ -13,7 +13,8 @@ function saveName(text) {
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = input.value;
-  location.reload();
+  //location.reload();
+  loadName();
   paintGreeting(currentValue);
   saveName(currentValue);
   todoInit();
