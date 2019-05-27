@@ -13,11 +13,9 @@ function saveName(text) {
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = input.value;
-  //location.reload();
-  loadName();
+  location.reload();
   paintGreeting(currentValue);
   saveName(currentValue);
-  todoInit();
 }
 
 function askForName() {
